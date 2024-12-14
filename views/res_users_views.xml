@@ -6,7 +6,7 @@
             <field name="inherit_id" ref="base.view_users_form" />
             <field name="arch" type="xml">
                 <group name="messaging" position="after">
-                    <group name="purchase" string="Purchase" groups="coinsamatik_supplier_buyer.national_purchase,coinsamatik_supplier_buyer.foreign_purchase">
+                    <group name="purchase" string="Purchase" groups="purchase.group_purchase_manager,purchase.group_warning_purchase">
                         <field name="national_purchase" />
                         <field name="foreign_purchase" />
                     </group>

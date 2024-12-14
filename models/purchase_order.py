@@ -12,4 +12,4 @@ class PurchaseOrder(models.Model):
     @api.onchange("partner_id")
     def onchange_partner_id(self):
         if self.partner_id:
-            self.user_id = self.partner_id.purchase_user_id or False
+            self.user_id = self.partner_id.purchase_user_id or self.current_user_id
