@@ -8,9 +8,12 @@ class ResUsers(models.Model):
     _inherit = "res.users"
 
     def compute_has_purchase_groups(self):
-        self.has_purchase_groups = self.has_group(
-            "purchase.group_purchase_manager"
-        ) or self.has_group("purchase.group_warning_purchase")
+        self.has_purchase_groups = False
+        if any(
+            self.has_group("purchase.group_purchase_manager"),
+            self.has_group("purchase.group_warning_purchase"),
+        ):
+            self.has_purchase_groups = True
 
     national_purchase = fields.Boolean()
     foreign_purchase = fields.Boolean()
