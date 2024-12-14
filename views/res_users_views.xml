@@ -9,7 +9,7 @@
                     <field name="has_purchase_groups" invisible="1"/>
                 </field>
                 <xpath expr="//div[@class='oe_title']" position="after">
-                    <group name="purchase" string="Purchase" attrs="{'invisible': ['has_purchase_groups','=', False]}">
+                    <group name="purchase" string="Purchase" attrs="{'invisible': [('has_purchase_groups','=', False)]}">
                         <field name="national_purchase" />
                         <field name="foreign_purchase" />
                     </group>
