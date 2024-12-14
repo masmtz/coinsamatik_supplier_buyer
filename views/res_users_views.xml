@@ -5,12 +5,13 @@
             <field name="model">res.users</field>
             <field name="inherit_id" ref="base.view_users_form" />
             <field name="arch" type="xml">
-                <group name="messaging" position="after">
-                    <group name="purchase" string="Purchase" groups="purchase.group_purchase_manager,purchase.group_warning_purchase">
+                <xpath expr="//div[@class='oe_title']" position="after">
+                    <field name="has_purchase_groups" invisible="1"/>
+                    <group name="purchase" string="Purchase" attrs="{'invisible': ['has_purchase_groups','=', False]}">
                         <field name="national_purchase" />
                         <field name="foreign_purchase" />
                     </group>
-                </group>
+                </xpath>
             </field>
         </record>
     </data>
