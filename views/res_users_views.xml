@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record id="coinsamatik_res_users_view_form" model="ir.ui.view">
+            <field name="name">coinsamatik_res_users_view_form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form" />
+            <field name="arch" type="xml">
+                <group name="messaging" position="after">
+                    <group name="purchase" string="Purchase" groups="coinsamatik_supplier_buyer.national_purchase,coinsamatik_supplier_buyer.foreign_purchase">
+                        <field name="national_purchase" />
+                        <field name="foreign_purchase" />
+                    </group>
+                </group>
+            </field>
+        </record>
+    </data>
+</odoo>

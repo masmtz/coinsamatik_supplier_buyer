@@ -1,0 +1,57 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* coinsamatik_supplier_buyer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-24 19:52+0000\n"
+"PO-Revision-Date: 2024-10-24 19:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: coinsamatik_supplier_buyer
+#: model:ir.model.fields,field_description:coinsamatik_supplier_buyer.field_res_partner__purchase_user_id
+#: model:ir.model.fields,field_description:coinsamatik_supplier_buyer.field_res_users__purchase_user_id
+msgid "Buyer"
+msgstr "Comprador"
+
+#. module: coinsamatik_supplier_buyer
+#: model:ir.model,name:coinsamatik_supplier_buyer.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: coinsamatik_supplier_buyer
+#: model:ir.model.fields,field_description:coinsamatik_supplier_buyer.field_res_users__foreign_purchase
+msgid "Foreign Purchase"
+msgstr "Compra Extranjera"
+
+#. module: coinsamatik_supplier_buyer
+#: model:res.groups,name:coinsamatik_supplier_buyer.foreign_purchase
+msgid "Foreign Purchases"
+msgstr "Compras Extranjeras"
+
+#. module: coinsamatik_supplier_buyer
+#: model:ir.model.fields,field_description:coinsamatik_supplier_buyer.field_res_users__national_purchase
+msgid "National Purchase"
+msgstr "Compra Nacional"
+
+#. module: coinsamatik_supplier_buyer
+#: model:res.groups,name:coinsamatik_supplier_buyer.national_purchase
+msgid "National Purchases"
+msgstr "Compras Nacionales"
+
+#. module: coinsamatik_supplier_buyer
+#: model_terms:ir.ui.view,arch_db:coinsamatik_supplier_buyer.coinsamatik_res_users_view_form
+msgid "Purchase"
+msgstr "Compras"
+
+#. module: coinsamatik_supplier_buyer
+#: model:ir.model,name:coinsamatik_supplier_buyer.model_res_users
+msgid "User"
+msgstr "Usuario"

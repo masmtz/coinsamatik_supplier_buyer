@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <record id="national_purchase" model="res.groups">
+            <field name="name">National Purchases</field>
+        </record>
+        <record id="foreign_purchase" model="res.groups">
+            <field name="name">Foreign Purchases</field>
+        </record>
+    </data>
+</odoo>
