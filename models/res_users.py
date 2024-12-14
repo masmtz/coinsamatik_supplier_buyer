@@ -9,7 +9,12 @@ class ResUsers(models.Model):
 
     def compute_has_purchase_groups(self):
         self.has_purchase_groups = False
-        if self.has_group("purchase.group_warning_purchase"):
+        if any(
+            [
+                self.has_group("purchase.group_purchase_manager"),
+                self.has_group("purchase.group_warning_purchase"),
+            ]
+        ):
             self.has_purchase_groups = True
 
     national_purchase = fields.Boolean()
