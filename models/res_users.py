@@ -15,5 +15,7 @@ class ResUsers(models.Model):
             "coinsamatik_supplier_buyer.foreign_purchase"
         )
 
-    national_purchase = fields.Boolean(compute="compute_has_purchase_groups")
-    foreign_purchase = fields.Boolean(compute="compute_has_purchase_groups")
+    national_purchase = fields.Boolean(
+        compute="compute_has_purchase_groups", store=True
+    )
+    foreign_purchase = fields.Boolean(compute="compute_has_purchase_groups", store=True)
