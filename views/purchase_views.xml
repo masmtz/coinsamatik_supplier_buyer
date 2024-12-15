@@ -1,6 +1,18 @@
 <odoo>
     <data>
 
+        <record id="coinsamatik_purchase_order_view_filter" model="ir.ui.view">
+            <field name="name">coinsamatik_purchase_order_view_filter</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.view_purchase_order_filter"/>
+            <field name="arch" type="xml">
+                <filter name="my_purchases" position="after">
+                    <filter name="national_purchases" string="Compras Nacionales" domain="[('user_id.national_purchase', '=', 1)]" groups="purchase.group_purchase_manager"/>
+                    <filter name="foreign_purchases" string="Compras Extranjeras" domain="[('user_id.foreign_purchase', '=', 1)]" groups="purchase.group_purchase_manager"/>   
+                </filter>
+            </field>
+        </record>
+
         <record id="coinsamatik_purchase_order_view_form" model="ir.ui.view">
             <field name="name">coinsamatik_purchase_order_view_form</field>
             <field name="model">purchase.order</field>
