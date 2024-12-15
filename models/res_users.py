@@ -7,6 +7,7 @@ from odoo.exceptions import UserError
 class ResUsers(models.Model):
     _inherit = "res.users"
 
+    @api.depends("groups_id")
     def compute_has_purchase_groups(self):
         for rec in self:
             rec.national_purchase = self.sudo(rec).has_group(
